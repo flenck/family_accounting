@@ -1,6 +1,22 @@
 from fastapi import FastAPI
 from typing import List
 
+from app.schemas.transaction import (
+    TransactionCreate,
+    TransactionOut,
+    TransactionSyncOut,
+    TransactionUpdate,
+)
+
+from app.services.transactions_service import (
+    create_transaction_service,
+    get_transactions_service,
+    get_transactions_changes_service,
+    update_transaction_service,
+    delete_transaction_service,
+)
+
+
 from app.schemas.transaction import TransactionCreate, TransactionOut
 from app.services.transactions_service import (
     create_transaction_service,
@@ -25,3 +41,15 @@ def add_transaction(tx: TransactionCreate):
 def get_transactions():
     return get_transactions_service()
 
+
+@app.put("/transactions/{transaction_id}", response_model=TransactionOut)
+def update_transaction_api(
+    transaction_id: int,
+    tx: TransactionUpdate
+):
+    return update_transaction_service(transaction_id, tx)
+
+@app.delete("/transactions/{transaction_id}")
+def delete_transaction_api(transaction_id: int):
+    delete_transaction_service(transaction_id)
+    return {"status": "deleted"}
