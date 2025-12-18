@@ -1,0 +1,13 @@
+# Client Local Database Schema
+
+## transactions_local
+字段说明...
+
+## Sync Mapping Rules
+...
+
+## Offline Strategy
+...
+
+## Future Extensions
+...

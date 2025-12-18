@@ -21,6 +21,10 @@ class TransactionOut(BaseModel):
     occurred_at: str
 
 
-class TransactionSyncOut(TransactionOut):
+class TransactionSyncOut(BaseModel):
+    id: int
+    household_id: int
+    amount_cents: int
+    note: Optional[str]
     updated_at: str
     is_deleted: bool
