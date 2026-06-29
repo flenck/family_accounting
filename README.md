@@ -37,6 +37,7 @@ See [docs/sync_v1_spec.md](docs/sync_v1_spec.md) for full specification.
 
 ## Recent Updates
 
+- **2026-06-29** - Daily auto-sync: repository up to date, sync-dev branch active
 - **2026-06-27** - Auto-sync with GitHub, README added
 - **2026-06-26** - Added `category` field to transactions
 - **2026-06-26** - Backend + Flutter web connected, transactions API working
