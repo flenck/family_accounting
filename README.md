@@ -37,6 +37,7 @@ See [docs/sync_v1_spec.md](docs/sync_v1_spec.md) for full specification.
 
 ## Recent Updates
 
+- **2026-07-15** - Daily auto-sync: GitHub API connection timeout (TLS/GnuTLS recv error -110), network latency detected, local repo up to date with sync-dev branch, no new local changes to commit, previous commits from 2026-07-14 remain pending push
 - **2026-07-14** - Daily auto-sync: GitHub API reachable, local repo ahead of remote by 2 commits (2026-07-12, 2026-07-13), push operation timed out (network latency), no new local changes to commit, sync-dev branch active
 - **2026-07-13** - Daily auto-sync: GitHub API reachable, local repo ahead of remote by 1 commit (2026-07-12), push operation timed out (network latency), no new local changes to commit, sync-dev branch active
 - **2026-07-12** - Daily auto-sync: network issue detected (GitHub empty reply), local repo up to date with remote, sync-dev branch active, no new changes since 2026-07-11
